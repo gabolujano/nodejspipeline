@@ -12,7 +12,7 @@ node {
      }
    }
    stage('Docker Build & Push') {
-     docker.withRegistry('https://docker.io', 'dockerhub') {
+     docker.withRegistry('', 'dockerhub') {
       def nuestraapp = docker.build("lujano23/dockergls2022:latest", ".")
       nuestraapp.push()
      }
