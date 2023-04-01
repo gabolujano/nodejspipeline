@@ -14,7 +14,7 @@ node {
      }
    }                   
    stage('Docker Build & Push') {
-     docker.withRegistry('', 'docker-hub') {
+     docker.withRegistry('', 'dockerhub') {
       def nuestraapp = docker.build("lujano23/nodejsapp:${gitcommit}", ".")
       nuestraapp.push()
      }
